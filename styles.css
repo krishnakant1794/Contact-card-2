@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #611547, #7a0b11);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card {
+    width: 320px;
+    height: 500px;
+    perspective: 1200px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease-in-out;
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    background: #f8d7ff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.card-front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #330109;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h2, h3 {
+    color: #000000;
+}
+
+p {
+    font-size: 14px;
+    color: #000000;
+}
+
+.flip-btn {
+    margin-top: 15px;
+    padding: 8px 15px;
+    background: #500814;
+    color: rgb(253, 253, 253);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.flip-btn:hover {
+    background: #481019;
+}
+
+/* Social Media Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-link {
+    font-size: 22px;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-link:hover {
+    transform: scale(1.2);
+}
+
+.linkedin { color: #330109; }
+.instagram { color: #330109; }
+.github { color: #330109; }
+.twitter { color: #330109; }
+
